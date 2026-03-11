@@ -9,11 +9,11 @@ export class Tema {
   id: number;
 
   @Transform(({ value }: TransformFnParams) => value?.trim())
-  @IsNotEmpty({ message: 'A descrição é obrigatória' })
-  @Length(5, 255, { message: 'A descrição deve ter entre 5 e 255 caracteres' })
+  @IsNotEmpty({ message: 'A Descrição é Obrigatória' })
+  @Length(5, 255, { message: 'A Descrição deve ter entre 10 e 100 caracteres' })
   @Column({ length: 255, nullable: false })
   descricao: string;
 
-  @OneToMany( () => Postagem, (postagem) => postagem.tema)
-  postagem: Postagem[];
+  @OneToMany(() => Postagem, (postagem) => postagem.tema)
+  postagem: Postagem[]; // Array de retorno
 }

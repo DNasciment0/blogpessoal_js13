@@ -1,11 +1,10 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DeleteResult, ILike, Repository } from 'typeorm';
 import { Tema } from '../entities/tema.entity';
+import { DeleteResult, ILike, Repository } from 'typeorm';
 
 @Injectable()
 export class TemaService {
-  [x: string]: any;
   constructor(
     @InjectRepository(Tema)
     private temaRepository: Repository<Tema>,
@@ -28,9 +27,10 @@ export class TemaService {
         postagem: true,
       },
     });
-    if (!tema) {
+
+    if (!tema)
       throw new HttpException('Tema não encontrado!', HttpStatus.NOT_FOUND);
-    }
+
     return tema;
   }
 
@@ -46,25 +46,24 @@ export class TemaService {
   }
 
   async create(tema: Tema): Promise<Tema> {
-    return await this.temaRepository.save(tema);
+    return this.temaRepository.save(tema);
   }
 
   async update(tema: Tema): Promise<Tema> {
-    if (!tema.id || tema.id <= 0) {
+    if (!tema.id || tema.id <= 0)
       throw new HttpException(
         'O ID do tema é inválido!',
         HttpStatus.BAD_REQUEST,
       );
-    }
 
     await this.findById(tema.id);
 
-    return await this.temaRepository.save(tema);
+    return this.temaRepository.save(tema);
   }
 
   async delete(id: number): Promise<DeleteResult> {
     await this.findById(id);
 
-    return await this.temaRepository.delete(id);
+    return this.temaRepository.delete(id);
   }
 }
