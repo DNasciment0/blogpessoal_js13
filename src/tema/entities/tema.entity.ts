@@ -12,7 +12,7 @@ export class Tema {
 
   @Transform(({ value }: TransformFnParams) => value?.trim())
   @IsNotEmpty({ message: 'A Descrição é Obrigatória' })
-  @Length(5, 255, { message: 'A Descrição deve ter entre 10 e 100 caracteres' })
+  @Length(5, 255, { message: 'A Descrição deve ter entre 5 e 100 caracteres' })
   @Column({ length: 255, nullable: false })
   @ApiProperty()
   descricao: string;
