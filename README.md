@@ -432,10 +432,10 @@ Este projeto está sob licença **MIT** — livre para uso educacional e profiss
 
 
 
-**Jeaninny Teixeira - Desenvolvedora Full Stack**
+**Daniel Nascimento - Desenvolvedora Full Stack**
 
-🔗 **GitHub:** https://github.com/jeaninny
+🔗 **GitHub:** https://github.com/Dnasciment0
 
-🔗 **LinkedIn:** https://www.linkedin.com/in/jeaninnyteixeira
+
 
 Projeto desenvolvido para **aprendizado contínuo**, **demonstração técnica** e **portfólio profissional**.
