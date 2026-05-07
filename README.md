@@ -322,7 +322,7 @@ Para executar o projeto localmente:
 ### Clonando o repositório
 
 ```bash
-git clone https://github.com/jeaninny/blogpessoal_tjs13.git
+git clone https://github.com/danielnascimen-to/blogpessoal_tjs13.git
 cd blogpessoal_tjs13
 ```
 
